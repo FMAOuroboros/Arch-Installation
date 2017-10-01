@@ -114,16 +114,25 @@ but required whilre recreating the initramfs.
 22. Set the root password
 ```passwd```
 
-23. Choose a bootloader - I took grub
+23. Install vim - Just for me to make some editing easier
+```pacman -S vim```
+
+24. Choose a bootloader - I took grub
 ```pacman -S grub```
 
-24. Install grub
+25. Install grub
 ```grub-install --target=i386-pc /dev/sda```
 
-25. Create grub config
+26.  Add kernel parameter for encryption
+```
+vim /etc/default/grub
+cryptdevice=UUID=<device-UUID>:cryptroot root=/dev/mapper/cryptroot
+```
+
+27. Create grub config
 ```grub-mkconfig -o /boot/grub/grub.cfg```
 
-25. Reboot
+28. Reboot
 ```
 exit
 reboot
