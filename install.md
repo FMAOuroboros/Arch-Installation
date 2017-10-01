@@ -126,7 +126,7 @@ but required whilre recreating the initramfs.
 26.  Add kernel parameter for encryption
 ```
 vim /etc/default/grub
-cryptdevice=UUID=<device-UUID>:cryptroot root=/dev/mapper/cryptroot
+cryptdevice=/dev/sda2:cryptroot
 ```
 
 27. Create grub config
