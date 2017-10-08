@@ -177,7 +177,7 @@ grub-install --target=i386-pc /dev/sda
 *  Add kernel parameter for encryption
 ```
 vim /etc/default/grub
-cryptdevice=/dev/sda2:cryptroot
+GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda2:cryptroot"
 ```
 
 * Create grub config
