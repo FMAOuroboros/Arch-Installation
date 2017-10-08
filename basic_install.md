@@ -81,7 +81,7 @@ mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
 ```
 
-* Install base packages
+* Install base packages, kernel, etc
 ```
 pacstrap /mnt base
 ```
